@@ -190,7 +190,7 @@ Oceanease/
 │
 └── README.md 
 
-
+ ## Installation
 - Clone the repository
 - Place the project inside the server root directory
 (e.g., htdocs in XAMPP)
@@ -200,3 +200,20 @@ Oceanease/
 - Start Apache and MySQL
 - Access the application in the browser:
    http://localhost/oceanease/
+
+ ## Future Enhancements
+- Email and SMS booking notifications
+- Mobile-responsive / PWA support
+- Analytics dashboard for managers
+- Online payment integration
+- Inventory auto-management
+- AI-based booking recommendations  
+
+## Contact
+Project owner / maintainer
+Kavyashree D M
+
+📩 Email: kavyashreedmmohan@gmail.com
+
+## ⭐ Support
+If you like this project, please ⭐ the repo!
