@@ -170,6 +170,8 @@ Oceanease/
 │   ├── admin_homepage.php
 │   ├── edit_menu.php
 │   ├── edit_voyager.php
+│   ├── manage_menu.php
+│   ├── manage_voyager.php
 │
 ├── manager/                                  # Manager module
 │   ├── manager_dashboard.php
