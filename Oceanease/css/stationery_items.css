@@ -1,0 +1,185 @@
+/* ================= RESET ================= */
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= BODY ================= */
+body {
+    background: #f0f8ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #00796b;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+    color: #ffeb3b;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffeb3b;
+}
+
+.logout-btn {
+    background: #ff4d4f;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+    background: #e0f2f1;
+    padding: 30px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #00796b;
+}
+
+.hero p {
+    margin-top: 6px;
+    color: #555;
+}
+
+/* ================= GRID ================= */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0 30px 30px;
+}
+
+/* ================= CARD ================= */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    /* 🔒 GRID TO LOCK CARD HEIGHTS */
+    display: grid;
+    grid-template-rows: 150px 1fr 50px; /* image / content / actions */
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= IMAGE ================= */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* ================= CARD CONTENT ================= */
+.card-content {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    color: #00796b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ================= CARD ACTIONS ================= */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: #00796b;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: #004d40;
+}
+
+.btn-delete {
+    background: #ff4d4f;
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #b30000;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}

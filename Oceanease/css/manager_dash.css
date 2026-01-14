@@ -1,0 +1,316 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f0f8ff;
+    min-height: 100vh;
+    padding-top: 80px; /* space for fixed navbar */
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00796b;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    /* 🔑 IMPORTANT: allow dropdown to overflow */
+    overflow: visible;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 42px;
+    height: 42px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Nav */
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    /* 🔑 IMPORTANT */
+    overflow: visible;
+}
+
+/* Links */
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: #004d40;
+    color: #ffeb3b;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dropdown:hover .dropbtn {
+    background: #004d40;
+    color: #ffeb3b;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    min-width: 220px;
+    background: #00796b;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 9999; /* 🔑 CRITICAL */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.dropdown-content a:hover {
+    background: #f0f8ff;
+    color: #004d40;
+}
+
+/* Show dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ================= USER INFO ================= */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info span {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: #d32f2f;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 320px;
+    background:
+        linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.7)),
+        url("https://th.bing.com/th/id/OIP.wzrPwvecjO7tezAMEiKVCQHaEK?w=295&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard-container {
+    display: flex;
+    padding: 25px;
+    gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    color: #00796b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #004d40;
+}
+
+/* Overview */
+.overview {
+    flex: 1;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card .info {
+    padding: 16px;
+    text-align: center;
+}
+
+.card .info h4 {
+    color: #00796b;
+    margin-bottom: 6px;
+}
+
+.card .info p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .info a {
+    display: inline-block;
+    background: #00796b;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card .info a:hover {
+    background: #004d40;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 30px;
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar nav {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+}

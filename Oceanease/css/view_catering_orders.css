@@ -1,0 +1,266 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    color: #333;
+    padding-top: 80px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #00796b;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffeb3b;
+}
+
+/* ================= USER ================= */
+.user-actions {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-email {
+    color: #ffeb3b;
+    font-weight: 700;
+}
+
+.logout-btn {
+    background: #d32f2f;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 260px;
+    background: linear-gradient(rgba(0,121,107,.8), rgba(0,121,107,.8)),
+    url('https://images.unsplash.com/photo-1551218808-94e220e084d2') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 25px;
+}
+
+/* ================= TABLE ================= */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.orders-table {
+    width: 100%;
+    min-width: 900px;
+    background: white;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+    border: 2px solid #00796b;
+}
+
+.orders-table thead {
+    background: #00796b;
+    color: white;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border: 1px solid #cfd8dc;
+    white-space: nowrap;
+}
+
+.orders-table thead th {
+    border-color: #00695c;
+}
+
+.orders-table tbody tr:hover {
+    background: #f1f8f7;
+}
+
+/* ================= STATUS ================= */
+.status {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: .85rem;
+    display: inline-block;
+}
+
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.status.completed {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* ================= ACTION DROPDOWN ================= */
+.status-action {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #00796b;
+    background: #e0f2f1;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.status-action:hover {
+    background: #b2dfdb;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .navbar nav {
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 130px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo-container,
+    .user-actions {
+        position: static;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: .9rem;
+    }
+
+    .status-action {
+        width: 100%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .container {
+        margin: 25px auto;
+    }
+
+    .container h2 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: .85rem;
+    }
+}

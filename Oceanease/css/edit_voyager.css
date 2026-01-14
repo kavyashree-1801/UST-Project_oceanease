@@ -1,0 +1,289 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+    background: #f0f8ff;
+}
+
+/* ================= PAGE WRAPPER ================= */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* space for fixed navbar */
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #00695c;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-container img {
+    height: 42px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Nav links (CENTER) */
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: rgba(255,255,255,0.2);
+    color: #ffeb3b;
+}
+
+/* User info (RIGHT) */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffeb3b;
+    font-weight: bold;
+    justify-self: end;
+    font-size: 1rem;
+}
+
+.user-info span {
+    text-transform: lowercase; /* lowercase email greeting */
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Logout button */
+.logout-btn {
+    background: #d32f2f;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #b30000;
+}
+
+/* ================= CONTENT / FORM ================= */
+.container {
+    flex: 1;
+    max-width: 600px;
+    width: 95%;
+    margin: 120px auto 50px auto; /* space for navbar */
+    padding: 0 20px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #00796b;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: lowercase;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+/* Submit button */
+form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #00796b;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #004d40;
+}
+
+/* ================= FOOTER ================= */
+/* Sticky footer */
+footer {
+    background: #00695c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .navbar {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .user-info {
+        justify-content: flex-end;
+        font-size: 0.95rem;
+    }
+
+    .container {
+        margin: 140px 20px 80px 20px; /* leave space for footer */
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 10px;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .user-info {
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+
+    .container {
+        margin: 160px 15px 100px 15px; /* top + bottom space for navbar & footer */
+    }
+
+    .container h2 {
+        font-size: 1.6rem;
+    }
+
+    form label {
+        font-size: 0.95rem;
+    }
+
+    form input,
+    form select {
+        font-size: 0.95rem;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 180px 10px 120px 10px;
+        padding: 0 10px;
+    }
+
+    .container h2 {
+        font-size: 1.4rem;
+    }
+
+    .user-info span {
+        font-size: 0.9rem;
+    }
+
+    form input,
+    form select,
+    form button {
+        font-size: 0.9rem;
+    }
+}

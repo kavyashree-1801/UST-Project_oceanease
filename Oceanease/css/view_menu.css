@@ -1,0 +1,210 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #00796b;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* NAV LINKS */
+.navbar nav {
+    display: flex;
+    gap: 50px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffeb3b;
+}
+
+/* USER ACTIONS */
+.user-actions {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* HELLO TEXT */
+.user-email {
+    color: #ffeb3b;
+    font-weight: 700;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    background: #d32f2f;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 250px;
+    background: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 30px;
+}
+
+/* ================= CARDS ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .navbar nav {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo-container,
+    .user-actions {
+        position: static;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}

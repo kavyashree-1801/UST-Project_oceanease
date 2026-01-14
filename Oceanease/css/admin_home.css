@@ -1,0 +1,222 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* space for fixed navbar */
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, user-actions right */
+    background: #00796b;
+    padding: 15px 30px;
+    position: fixed; /* fixed at top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-container .logo-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navbar Links: centered */
+.navbar nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px; /* space between links */
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold; /* bold links */
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: #004d40;
+    color: #ffeb3b;
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Admin Email */
+.user-actions .user-email {
+    color: #ffeb3b; /* yellow */
+    font-weight: bold;
+}
+
+/* Logout Button */
+.user-actions .logout-btn {
+    background: #d32f2f; /* red */
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.user-actions .logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= DASHBOARD CARDS / CONTAINER ================= */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 20px; /* spacing around cards */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #00796b;
+    margin: 15px 0 5px;
+}
+
+.card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #00796b;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: #f1fdfd;
+}
+
+/* ================= BUTTONS ================= */
+.edit-btn, .delete-btn {
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #0288d1;
+}
+
+.edit-btn:hover {
+    background: #025f85;
+}
+
+.delete-btn {
+    background: #d32f2f;
+}
+
+.delete-btn:hover {
+    background: #900;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+    .navbar nav {
+        position: static;
+        transform: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .dashboard-container {
+        grid-template-columns: 1fr; /* single column cards on mobile */
+        padding: 20px 10px;
+    }
+}

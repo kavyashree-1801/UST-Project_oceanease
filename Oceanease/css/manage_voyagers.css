@@ -1,0 +1,237 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* logo left, user-actions right */
+    background: #00796b;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo image */
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-container .logo-text {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Navbar Links: CENTERED */
+.navbar nav {
+    position: absolute;       /* absolute positioning for perfect center */
+    left: 50%;                /* move 50% from left */
+    transform: translateX(-50%); /* shift back by half width */
+    display: flex;
+    gap: 30px;               /* space between links */
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;        /* bold links */
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: #004d40;
+    color: #ffeb3b;
+}
+
+/* User Actions (email + logout) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Admin Email */
+.user-actions .user-email {
+    color: #ffeb3b; /* yellow */
+    font-weight: bold;
+}
+
+/* Logout Button */
+.user-actions .logout-btn {
+    background: #d32f2f; /* red */
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.user-actions .logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 30px;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #00796b;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: #f1fdfd;
+}
+
+/* ================= BUTTONS ================= */
+.edit-btn, .delete-btn {
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #0288d1;
+}
+
+.edit-btn:hover {
+    background: #025f85;
+}
+
+.delete-btn {
+    background: #d32f2f;
+}
+
+.delete-btn:hover {
+    background: #900;
+}
+
+/* ================= FORM ================= */
+.menu-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.menu-form input,
+.menu-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-form textarea {
+    grid-column: 1 / -1;
+    resize: vertical;
+}
+
+.menu-form button {
+    grid-column: 1 / -1;
+    padding: 10px;
+    background: #00796b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-form button:hover {
+    background: #004d40;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+    .navbar nav {
+        position: static;
+        transform: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .menu-form {
+        grid-template-columns: 1fr;
+    }
+}

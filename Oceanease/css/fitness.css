@@ -1,0 +1,362 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    padding-top: 90px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #00796b;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    background: #004d40;
+    color: #ffeb3b;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 6px 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #00796b;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #004d40;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #ffd700;
+}
+
+/* ================= USER EMAIL + LOGOUT ================= */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-email {
+    color: #ffeb3b;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logout-btn {
+    background: #d32f2f;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 50vh;
+    min-height: 300px;
+    background:
+        linear-gradient(rgba(0, 121, 107, 0.75), rgba(0, 121, 107, 0.75)),
+        url("https://tse2.mm.bing.net/th/id/OIP.Udf-azkA1qAHACRS0zKi9wHaE8?cb=defcache2defcache=1&rs=1&pid=ImgDetMain&o=7&rm=3")
+        center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 95%;
+    width: 900px;
+    margin: 0 auto 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ================= FORM ================= */
+form label {
+    font-weight: bold;
+    color: #00796b;
+    display: block;
+    margin-bottom: 6px;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #00796b;
+}
+
+form button {
+    background: #00796b;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background: #004d40;
+}
+
+/* ================= BOOKINGS TABLE ================= */
+.table-container {
+    margin-top: 25px;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 2px solid #00796b;
+}
+
+#fitnessTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+#fitnessTable thead {
+    background: #00796b;
+}
+
+#fitnessTable th {
+    color: #fff;
+    padding: 12px;
+    border: 1px solid #004d40;
+    text-align: center;
+}
+
+#fitnessTable td {
+    padding: 8px 6px;
+    border: 1px solid #cfd8dc;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Alternate row colors */
+#fitnessTable tbody tr:nth-child(even) {
+    background: #f1f9f7;
+}
+
+#fitnessTable tbody tr:hover {
+    background: #e0f2f1;
+}
+
+/* ================= STATUS COLORS ================= */
+.status-completed {
+    color: #81C784; /* green */
+    font-weight: bold;
+}
+
+.status-confirmed {
+    color: #000;
+    font-weight: bold;
+}
+
+.status-cancelled {
+    color: #c62828; /* red */
+    font-weight: bold;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.action-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+#fitnessTable td.action-wrapper {
+    padding: 0;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.action-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.edit-btn {
+    background: #fbc02d;
+    color: #000;
+}
+
+.edit-btn:hover:enabled {
+    background: #f9a825;
+}
+
+.cancel-btn {
+    background: #d32f2f;
+    color: #fff;
+}
+
+.cancel-btn:hover:enabled {
+    background: #b71c1c;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 0 10px 30px;
+    }
+
+    #fitnessTable th,
+    #fitnessTable td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}

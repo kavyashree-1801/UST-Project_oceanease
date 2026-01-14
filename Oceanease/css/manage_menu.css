@@ -1,0 +1,305 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #f0f8ff;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00796b;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo container */
+.logo-container {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+/* Nav center */
+.nav-center {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+    background: #004d40;
+    color: #ffeb3b;
+}
+
+/* User actions */
+.user-actions {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.user-email {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+.logout-btn {
+    background: #d32f2f;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 30px;
+}
+
+/* ================= FORM ================= */
+.menu-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.menu-form input,
+.menu-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.menu-form textarea {
+    grid-column: 1 / -1;
+    resize: vertical;
+}
+
+.menu-form button {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background: #00796b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-form button:hover {
+    background: #004d40;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border: 1px solid #00796b; /* table border */
+}
+
+thead {
+    background: #00796b;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #004d40; /* header borders */
+}
+
+tbody td {
+    padding: 12px;
+    border: 1px solid #ccc; /* cell borders */
+    vertical-align: middle;
+}
+
+/* Menu Item Image */
+.menu-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* space between buttons */
+    margin-top: 5px;
+    flex-wrap: nowrap; /* prevent stacking */
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 90px; /* equal width for better alignment */
+    text-align: center;
+}
+
+.edit-btn {
+    background: #00796b;
+}
+
+.edit-btn:hover {
+    background: #004d40;
+}
+
+.delete-btn {
+    background: #d32f2f;
+}
+
+.delete-btn:hover {
+    background: #b71c1c;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #00796b;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .menu-form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .logo-container {
+        position: static;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .nav-center {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .user-actions {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .menu-form {
+        grid-template-columns: 1fr; /* stack inputs */
+    }
+
+    table {
+        font-size: 0.9rem;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .actions {
+        justify-content: flex-start; /* keep buttons side by side */
+        flex-wrap: nowrap; /* prevent stacking */
+        overflow-x: auto; /* scroll if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-center a {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+    }
+
+    .menu-form input,
+    .menu-form textarea,
+    .menu-form button {
+        font-size: 0.9rem;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        min-width: 70px;
+    }
+}

@@ -1,0 +1,32 @@
+* { box-sizing:border-box; font-family:Roboto,sans-serif; }
+body {
+    background: url('https://thumbs.dreamstime.com/b/cruise-ship-pool-deck-28636740.jpg') center/cover fixed;
+    display:flex; justify-content:center; align-items:center; height:100vh;
+}
+.auth-box{
+    background: rgba(255,255,255,0.95);
+    width: 400px; padding: 35px; border-radius:12px; text-align:center;
+}
+input, select, button { width:100%; padding:12px; margin:10px 0; }
+button{ background:#00796b; color:#fff; border:none; cursor:pointer; }
+button:hover{ background:#004d40; }
+.toggle{ cursor:pointer; color:#00796b; margin-top:10px; }
+
+/* PASSWORD BOX */
+.password-box{ position:relative; }
+.password-box input{ padding-right:45px; }
+.password-box .eye{
+    position:absolute; right:12px; top:50%; transform:translateY(-50%);
+    cursor:pointer; color:#00796b; font-size:18px;
+}
+.password-box .eye::after{
+    content: attr(data-tooltip);
+    position:absolute; right:30px; top:50%; transform:translateY(-50%);
+    background:#333; color:#fff; font-size:12px; padding:4px 6px; border-radius:4px;
+    white-space:nowrap; opacity:0; pointer-events:none; transition:opacity 0.2s;
+}
+.password-box .eye:hover::after{ opacity:1; }
+
+/* PASSWORD STRENGTH */
+#strengthBar, #resetStrengthBar{ height:8px; background:#ddd; border-radius:6px; margin-bottom:5px; }
+#strengthFill, #resetStrengthFill{ height:100%; width:0%; border-radius:6px; }
