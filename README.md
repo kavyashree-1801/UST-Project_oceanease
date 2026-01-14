@@ -207,7 +207,6 @@ Oceanease/
 
  ## Future Enhancements
 - Email and SMS booking notifications
-- Mobile-responsive / PWA support
 - Analytics dashboard for managers
 - Online payment integration
 - Inventory auto-management
