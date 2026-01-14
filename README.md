@@ -5,7 +5,7 @@ The application is built using PHP, MySQL, HTML, CSS, and JavaScript with a clea
 
 ## 📸 Demo / Live Link
 🔗 Live Preview: 
-📂 Repository Link:c
+📂 Repository Link:https://github.com/kavyashree-1801/UST-Project_oceanease.git
 
 ## Features
 👤 Voyager Features
