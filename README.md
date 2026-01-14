@@ -4,7 +4,7 @@ It allows users to explore cruises, book cabins, manage profiles, and view booki
 The application is built using PHP, MySQL, HTML, CSS, and JavaScript with a clean and responsive UI.
 
 ## 📸 Demo / Live Link
-🔗 Live Preview: 
+🔗 Live Preview:https://github.com/user-attachments/assets/5f13f02b-0924-485e-bba6-adde1b0be7d0 
 📂 Repository Link:https://github.com/kavyashree-1801/UST-Project_oceanease.git
 
 ## Features
