@@ -214,9 +214,8 @@ Oceanease/
 - AI-based booking recommendations  
 
 ## Contact
-Project owner / maintainer
+Project owner 
 Kavyashree D M
-
 📩 Email: kavyashreedmmohan@gmail.com
 
 ## ⭐ Support
